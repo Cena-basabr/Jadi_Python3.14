@@ -135,5 +135,5 @@ for question in selected_questions:
     else:
         print("پاسخ شما اشتباه است.")
 
-print(f"بازی تمام شد! امتیاز نهایی شما: {score} از {len(questions)}")
+print(f"بازی تمام شد! امتیاز نهایی شما: {score} از {len(selected_questions)}")
 
