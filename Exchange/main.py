@@ -1,6 +1,6 @@
 import requests
 
-API_KEY = "82f806e38be1f02696dfc5e8"
+API_KEY = "API_KEY"
 
 base_currency = input("ارز مبدأ را وارد کنید (مثلاً USD): ").upper()
 target_currency = input("ارز مقصد را وارد کنید (مثلاً EUR): ").upper()
