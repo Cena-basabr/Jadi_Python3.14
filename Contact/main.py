@@ -15,26 +15,6 @@ class ContactBook:
         self.contacts = []
         self.load_from_csv()
 
-    def save_to_csv(self):
-        with open(self.filename, mode='w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(['Name', 'Email', 'Phone'])
-            for contact in self.contacts:
-                writer.writerow([contact.name, contact.email, contact.phonenumber])
-            print("دفترجه تلفن با موفقیت ذخیره شد")
-
-    def load_from_csv(self):
-        try:
-            with open(self.filename, mode='r', newline='') as file:
-                reader = csv.reader(file)
-                header = next(reader)
-                self.contacts.clear()
-                for row in reader:
-                    contact = Contact(name=row[0], email=row[1], phonenumber=row[2])
-                    self.contacts.append(contact)
-                print(f"مخاطبین با موفقیت از فایل '{self.filename}' بارگذاری شدند.")
-        except FileNotFoundError:
-            print(f"فایل '{self.filename}' یافت نشد. یک دفترچه تلفن جدید ایجاد می‌شود.")
 
     def add_contact(self, contact):
         self.contacts.append(contact)
